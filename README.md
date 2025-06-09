@@ -1,6 +1,6 @@
-# Personal Task Manager - Dark Mode with Geometric UI
+# Personal Task Manager
 
-A minimalist task management application built with the MERN stack (MongoDB, Express.js, React, Node.js), featuring a sleek dark mode UI with elegant geometric design elements.
+A minimalist task management application built with the MERN stack (MongoDB, Express.js, React, Node.js), featuring a sleek dark mode UI.
 
 ![Dark Mode Task Manager](https://via.placeholder.com/800x400/121212/ffffff?text=Geometric+Dark+Mode+Task+Manager)
 
