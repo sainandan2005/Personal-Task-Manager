@@ -2,15 +2,12 @@
 
 A minimalist task management application built with the MERN stack (MongoDB, Express.js, React, Node.js), featuring a sleek dark mode UI.
 
-![Dark Mode Task Manager](https://via.placeholder.com/800x400/121212/ffffff?text=Geometric+Dark+Mode+Task+Manager)
 
 ## Features
 
 - **Minimalist Task Management**: Focus on what matters - just title, priority, and due date
-- **Geometric UI Elements**: Modern design with polygon shapes, clip-paths, and 3D effects
 - **Sleek Dark Mode UI**: Easy on the eyes with a modern design and subtle animations
 - **Priority-based Organization**: Quickly identify important tasks with color coding
-- **Responsive Design**: Works flawlessly on desktop and mobile devices
 - **Interactive Elements**: Ripple effects and smooth transitions for better user experience
 
 ## Tech Stack
