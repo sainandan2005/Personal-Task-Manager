@@ -32,8 +32,8 @@ A minimalist task management application built with the MERN stack (MongoDB, Exp
 #### 1. Clone the repository
 
 ```bash
-git clone <repository-url>
-cd Personal-Task-Manager
+git clone https://github.com/yourusername/personal-task-manager.git
+cd personal-task-manager
 ```
 
 #### 2. Backend setup
