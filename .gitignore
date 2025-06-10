@@ -12,6 +12,7 @@
 
 # build files
 /frontend/build
+/frontend/dist
 
 # logs
 npm-debug.log*

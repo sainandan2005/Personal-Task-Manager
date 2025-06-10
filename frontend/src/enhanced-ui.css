@@ -1,0 +1,274 @@
+.icon-circle {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.bg-primary-soft {
+  background-color: rgba(100, 160, 255, 0.15);
+}
+
+.bg-warning-soft {
+  background-color: rgba(255, 186, 76, 0.15);
+}
+
+.bg-danger-soft {
+  background-color: rgba(255, 90, 101, 0.15);
+}
+
+.bg-success-soft {
+  background-color: rgba(95, 215, 138, 0.15);
+}
+
+.bg-info-soft {
+  background-color: rgba(79, 202, 207, 0.15);
+}
+
+/* Improve contrast for form elements */
+.form-control::placeholder {
+  opacity: 0.6;
+}
+
+/* Better hover effects for cards */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Make sure text is always readable */
+.text-light {
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Soft glow effect for primary elements */
+.btn-primary, .text-primary, .bg-primary {
+  position: relative;
+  z-index: 1;
+}
+
+.btn-primary::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(100, 160, 255, 0.5);
+  filter: blur(15px);
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.btn-primary:hover::after {
+  opacity: 0.5;
+}
+
+/* Calendar icon contrast improvements */
+.bi-calendar3, .bi-calendar-event {
+  color: var(--priority-medium);
+}
+
+/* Make date stand out more */
+.task-card .text-muted {
+  font-size: 0.9rem;
+  letter-spacing: 0.02em;
+}
+
+/* Geometric task card styling */
+.task-card {
+  clip-path: polygon(0 0, 100% 0, 100% 95%, 95% 100%, 0 100%);
+  position: relative;
+  overflow: visible;
+}
+
+.task-card::after {
+  content: '';
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  height: 15px;
+  width: 15px;
+  background-color: rgba(255, 255, 255, 0.1);
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  transform: rotate(45deg);
+  z-index: 1;
+}
+
+.task-card[data-priority='high']::after {
+  background-color: rgba(255, 90, 101, 0.2);
+}
+
+.task-card[data-priority='medium']::after {
+  background-color: rgba(255, 186, 76, 0.2);
+}
+
+.task-card[data-priority='low']::after {
+  background-color: rgba(79, 202, 207, 0.2);
+}
+
+/* Geometric badges */
+.badge-geometric {
+  clip-path: polygon(0 0, 92% 0, 100% 50%, 92% 100%, 0 100%, 8% 50%);
+  padding-left: 14px !important;
+  padding-right: 14px !important;
+  transform: translateY(-1px);
+}
+
+/* Geometric buttons for task items */
+.btn-geo-action {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+.btn-geo-action::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -5px;
+  right: -5px;
+  bottom: 0;
+  clip-path: polygon(5% 0, 95% 0, 100% 50%, 95% 100%, 5% 100%, 0% 50%);
+  background-color: currentColor;
+  opacity: 0.07;
+  z-index: -1;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.btn-geo-action:hover::before {
+  transform: scale(1.1);
+  opacity: 0.15;
+}
+
+/* Geometric button styling with enhanced 3D effects */
+.btn-geometric {
+  background-color: var(--accent-blue);
+  color: white;
+  clip-path: polygon(
+    0% 0%,
+    92% 0%,
+    100% 30%,
+    100% 100%,
+    8% 100%,
+    0% 70%
+  );
+  border: none;
+  padding: 14px 36px !important;
+  position: relative;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
+              box-shadow 0.3s ease, 
+              background-color 0.3s ease;
+  margin-top: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-decoration: none !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 200px;
+  z-index: 1;
+}
+
+.btn-geometric:hover {
+  transform: translateY(-5px) scale(1.03);
+  background-color: var(--accent-blue-dark);
+  box-shadow: 0 12px 20px rgba(0, 20, 60, 0.4),
+              0 0 20px rgba(100, 160, 255, 0.2);
+  color: white;
+}
+
+.btn-geometric:active {
+  transform: translateY(-2px) scale(0.98);
+  box-shadow: 0 5px 10px rgba(0, 20, 60, 0.3);
+}
+
+/* Inner border */
+.btn-geometric::after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  right: 3px;
+  bottom: 3px;
+  clip-path: polygon(
+    0% 0%,
+    92% 0%,
+    100% 30%,
+    100% 100%,
+    8% 100%,
+    0% 70%
+  );
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  pointer-events: none;
+}
+
+/* Bottom 3D effect */
+.btn-geometric::before {
+  content: '';
+  position: absolute;
+  top: 6px;
+  left: 0;
+  right: 0;
+  bottom: -6px;
+  background-color: rgba(0, 20, 60, 0.5);
+  clip-path: polygon(
+    0% 0%,
+    92% 0%,
+    100% 30%,
+    100% 100%,
+    8% 100%,
+    0% 70%
+  );
+  z-index: -1;
+  filter: blur(2px);
+  transition: transform 0.3s ease;
+}
+
+.btn-geometric:hover::before {
+  transform: translateY(2px) scale(0.98);
+}
+
+/* Icon styling */
+.btn-geometric i {
+  background: rgba(255, 255, 255, 0.2);
+  width: 28px;
+  height: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  margin-right: 12px;
+  transition: all 0.3s ease;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+.btn-geometric:hover i {
+  background: rgba(255, 255, 255, 0.3);
+  transform: rotate(10deg);
+}
+
+/* Ripple effect */
+.btn-geometric .ripple {
+  position: absolute;
+  border-radius: 50%;
+  transform: scale(0);
+  animation: ripple 0.6s linear;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+@keyframes ripple {
+  to {
+    transform: scale(2.5);
+    opacity: 0;
+  }
+}

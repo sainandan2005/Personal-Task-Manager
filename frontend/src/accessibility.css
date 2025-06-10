@@ -1,0 +1,121 @@
+/* Accessibility improvements */
+body {
+  color: var(--text-primary);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Alert Styling with improved visibility */
+.alert {
+  border-radius: 8px;
+  border: none !important;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.alert-danger {
+  background-color: rgba(255, 90, 101, 0.15) !important;
+  color: #ff9da3 !important;
+}
+
+.alert-success {
+  background-color: rgba(95, 215, 138, 0.15) !important;
+  color: #7de29f !important;
+}
+
+/* Custom Scrollbar for better visibility */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
+
+/* Animated effects for interactions */
+.btn {
+  transition: all 0.25s ease-in-out !important;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+/* Badge shadow effects */
+.badge {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Priority marker glow effects */
+.task-card[data-priority='high']::before {
+  box-shadow: 0 0 8px var(--priority-high);
+}
+
+/* Improved form validation styling */
+.was-validated .form-control:invalid,
+.form-control.is-invalid {
+  border-color: var(--priority-high) !important;
+  box-shadow: 0 0 0 0.25rem rgba(255, 90, 101, 0.25) !important;
+  background-image: none !important;
+}
+
+.invalid-feedback {
+  color: var(--priority-high) !important;
+  font-size: 0.85rem;
+}
+
+/* Improve container spacing on smaller devices */
+@media (max-width: 768px) {
+  .container {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+  
+  h2 {
+    font-size: 1.75rem;
+  }
+  
+  .card-body {
+    padding: 1rem !important;
+  }
+}
+
+/* Make buttons more prominent on mobile */
+@media (max-width: 576px) {
+  .btn {
+    padding: 0.5rem 1rem !important;
+  }
+  
+  .navbar-brand {
+    font-size: 1.25rem;
+  }
+}
+
+/* Focus styles for accessibility */
+.form-control:focus, 
+.form-select:focus, 
+.btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(100, 160, 255, 0.3) !important;
+}
+
+/* Improve date input styling */
+input[type="date"] {
+  min-height: 58px;
+}
+
+/* Additional styling for empty state */
+.empty-state .btn {
+  margin-top: 1rem;
+}
